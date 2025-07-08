@@ -1,112 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carrinho - Chiesa Móveis</title>
-  <style>
-    /* Estilo básico com cores elegantes */
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      color: #000;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      color: gold;
-      text-align: center;
-    }
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #f4f4f4;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid gold;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: black;
-      color: gold;
-      border: none;
-      padding: 12px 20px;
-      margin-top: 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      width: 100%;
-    }
-    button:hover {
-      background-color: gold;
-      color: black;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Finalizar Pedido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fefefe;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: black;
+            color: gold;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 30px auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: gold;
+            border: none;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        a {
+            margin-left: 10px;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-  <h1>Finalizar Pedido</h1>
-  
-  <!-- Formulário de finalização com dados obrigatórios -->
-  <form id="formulario">
+
+<h1>Finalizar Pedido</h1>
+
+<form id="pedidoForm">
     <label for="nome">Nome:</label>
-    <input type="text" id="nome" required />
+    <input type="text" id="nome" required>
 
     <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" required />
+    <input type="text" id="cpf" required>
 
     <label for="telefone">Telefone:</label>
-    <input type="tel" id="telefone" required />
+    <input type="text" id="telefone" required>
 
     <label for="cep">CEP:</label>
-    <input type="text" id="cep" required />
+    <input type="text" id="cep" required>
 
-    <label for="rua">Nome da Rua:</label>
-    <input type="text" id="rua" required />
+    <label for="rua">Rua:</label>
+    <input type="text" id="rua" required>
 
-    <label for="pedido">Resumo do Pedido:</label>
-    <textarea id="pedido" rows="5" required placeholder="Ex: 2 cadeiras Elegance, tecido azul, base dourada"></textarea>
+    <button type="button" onclick="enviarPedido()">Enviar Pedido via WhatsApp</button>
+    <a href="#" onclick="enviarPedido()">Confirmar</a>
+</form>
 
-    <button type="submit">Enviar Pedido via WhatsApp</button>
-  </form>
+<script>
+    function enviarPedido() {
+        const nome = document.getElementById('nome').value;
+        const cpf = document.getElementById('cpf').value;
+        const telefone = document.getElementById('telefone').value;
+        const cep = document.getElementById('cep').value;
+        const rua = document.getElementById('rua').value;
 
-  <script>
-    // Script para enviar os dados para o WhatsApp
-    document.getElementById("formulario").addEventListener("submit", function (e) {
-      e.preventDefault();
+        const numeroWhatsApp = '5554996072141'; // número correto
 
-      // Pegando os dados do formulário
-      const nome = document.getElementById("nome").value;
-      const cpf = document.getElementById("cpf").value;
-      const telefone = document.getElementById("telefone").value;
-      const cep = document.getElementById("cep").value;
-      const rua = document.getElementById("rua").value;
-      const pedido = document.getElementById("pedido").value;
+        const mensagem = `Olá, gostaria de finalizar meu pedido:%0A
+*Nome:* ${nome}%0A
+*CPF:* ${cpf}%0A
+*Telefone:* ${telefone}%0A
+*CEP:* ${cep}%0A
+*Rua:* ${rua}`;
 
-      // Montando a mensagem
-      const mensagem = `Olá! Meu nome é ${nome}.
-CPF: ${cpf}
-Telefone: ${telefone}
-Endereço: Rua ${rua}, CEP: ${cep}
+        const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+        window.open(url, '_blank');
+    }
+</script>
 
-Gostaria de fazer o seguinte pedido:
-${pedido}`;
-
-      // Codificando e redirecionando para o WhatsApp
-      const url = "https://wa.me/554996072141?text=" + encodeURIComponent(mensagem);
-      window.open(url, "_blank");
-    });
-  </script>
 </body>
 </html>
