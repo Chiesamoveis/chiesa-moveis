@@ -1,0 +1,72 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #000;
+    color: gold;
+    padding: 20px;
+    text-align: center;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.categoria {
+    padding: 40px 20px;
+}
+.categoria h2 {
+    color: #000;
+    border-bottom: 2px solid gold;
+}
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.produto {
+    border: 1px solid gold;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: 0.3s;
+}
+.produto:hover {
+    box-shadow: 0 0 10px gold;
+}
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+footer {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.pagina-produto, .formulario {
+    padding: 40px 20px;
+    text-align: center;
+}
+.botao {
+    background-color: gold;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+}
+input, select {
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+    max-width: 300px;
+}
