@@ -1,43 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chiesa Móveis</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chiesa Móveis</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Cabeçalho com título e menu de navegação -->
-    <header>
-        <h1>Chiesa Móveis</h1>
-        <nav>
-            <a href="#cadeiras">Cadeiras</a>
-            <a href="#sofas">Sofás</a>
-            <a href="#banquetas">Banquetas</a>
-            <a href="#mesas">Mesas</a>
-            <a href="#poltronas">Poltronas</a>
-            <a href="#office">Cadeiras Office</a>
-        </nav>
-    </header>
+  <!-- TOPO com logo -->
+  <header>
+    <img src="imagens/logo_chiesa.png" alt="Logo Chiesa Móveis" class="logo" />
+  </header>
 
-    <!-- Seção de Cadeiras -->
-    <section id="cadeiras" class="categoria">
-        <h2>Cadeiras</h2>
-        <div class="produtos">
-            <!-- Produto individual -->
-            <div class="produto">
-                <a href="produto.html"><img src="img/cadeira-elegance.png" alt="Cadeira Elegance"></a>
-                <h3>Cadeira Elegance</h3>
-                <p>Medidas (L/A/P): 50cm x 90cm x 55cm</p>
-                <p>Uma cadeira elegante com acabamento dourado.</p>
-            </div>
-        </div>
-    </section>
+  <!-- MENU de navegação -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="cadeiras.html">Cadeiras</a></li>
+      <li><a href="sofas.html">Sofás</a></li>
+      <li><a href="banquetas.html">Banquetas</a></li>
+      <li><a href="mesas.html">Mesas</a></li>
+      <li><a href="poltronas.html">Poltronas</a></li>
+      <li><a href="cadeiras-office.html">Cadeiras Office</a></li>
+    </ul>
+  </nav>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>© 2025 Chiesa Móveis - Todos os direitos reservados</p>
-    </footer>
+  <!-- TÍTULO principal da Home -->
+  <section class="titulo-secao">
+    <h1>Bem-vindo à Chiesa Móveis</h1>
+    <p class="descricao">Elegância e conforto em cada detalhe. Confira nossas promoções do mês!</p>
+  </section>
+
+  <!-- PROMOÇÕES DO MÊS -->
+  <section class="produtos-destaque">
+    <h2>Promoções do mês</h2>
+    <div class="produtos-lista">
+      <!-- PRODUTO 1 -->
+      <div class="produto-card">
+        <img src="imagens/cadeira-elegance.png" alt="Cadeira Elegance" />
+        <h3>Cadeira Elegance</h3>
+      </div>
+      <!-- PRODUTO 2 -->
+      <div class="produto-card">
+        <img src="imagens/sofa-luxo.png" alt="Sofá Luxo" />
+        <h3>Sofá Luxo</h3>
+      </div>
+      <!-- PRODUTO 3 -->
+      <div class="produto-card">
+        <img src="imagens/banqueta-classica.png" alt="Banqueta Clássica" />
+        <h3>Banqueta Clássica</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Chiesa Móveis - Todos os direitos reservados</p>
+  </footer>
 </body>
 </html>
