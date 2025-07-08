@@ -1,72 +1,111 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Corpo com fundo claro */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #ffffff;
-    color: #000;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
 }
+
+/* Logo no topo */
 header {
-    background-color: #000;
-    color: gold;
-    padding: 20px;
-    text-align: center;
+  text-align: center;
+  background-color: #000;
+  padding: 10px 0;
 }
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+.logo {
+  height: 120px;
 }
-.categoria {
-    padding: 40px 20px;
+
+/* MENU principal */
+.menu {
+  background-color: #000;
+  padding: 10px 0;
+  border-bottom: 2px solid gold;
 }
-.categoria h2 {
-    color: #000;
-    border-bottom: 2px solid gold;
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
-.produtos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.menu a {
+  text-decoration: none;
+  color: gold;
+  font-weight: bold;
+  transition: color 0.3s;
 }
-.produto {
-    border: 1px solid gold;
-    border-radius: 10px;
-    padding: 15px;
-    width: 250px;
-    text-align: center;
-    background-color: #f9f9f9;
-    transition: 0.3s;
+.menu a:hover,
+.menu a.active {
+  color: white;
 }
-.produto:hover {
-    box-shadow: 0 0 10px gold;
+
+/* TÍTULO da página */
+.titulo-secao {
+  text-align: center;
+  padding: 40px 20px 20px;
 }
-.produto img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+.titulo-secao h1 {
+  font-size: 32px;
+  color: #111;
 }
+.titulo-secao .descricao {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* PRODUTOS EM DESTAQUE */
+.produtos-destaque {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.produtos-destaque h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000;
+  border-bottom: 2px solid gold;
+  display: inline-block;
+}
+.produtos-lista {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.produto-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+.produto-card img {
+  max-width: 100%;
+  height: auto;
+}
+.produto-card h3 {
+  margin-top: 10px;
+  color: #333;
+}
+.produto-card:hover {
+  box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+}
+
+/* RODAPÉ */
 footer {
-    background-color: #000;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-.pagina-produto, .formulario {
-    padding: 40px 20px;
-    text-align: center;
-}
-.botao {
-    background-color: gold;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #000;
-    border-radius: 5px;
-}
-input, select {
-    padding: 10px;
-    margin: 5px;
-    width: 80%;
-    max-width: 300px;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
 }
